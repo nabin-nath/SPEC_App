@@ -11,6 +11,7 @@ class _coursesState extends State<courses> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.greenAccent[300],
         body: Stack(
           children: <Widget>[
             Container(
@@ -32,24 +33,24 @@ class _coursesState extends State<courses> {
                       SizedBox(
                         height: size.height * 0.05,
                       ),
-                      Text(
-                        "Study Material :)",
-                        style: Theme.of(context)
-                            .textTheme
-                            .display1
-                            .copyWith(fontWeight: FontWeight.w900),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100].withOpacity(0.7),
+                          border: Border.all(color: Colors.black,),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text(
+                          "Study Material",
+                          style: Theme.of(context)
+                              .textTheme
+                              .display1
+                              .copyWith(fontWeight: FontWeight.w900),
+                        ),
                       ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Study Material",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 80),
                       SizedBox(
                         width: size.width * .6, // it just take 60% of total width
-                        child: Text(
-                          "Previous year papers, books, notes of first year and ECE department and books of ECE department is provided here",
-                        ),
                       ),
                       SizedBox(
                         width: size.width * .5, // it just take the 50% width
@@ -84,15 +85,23 @@ class _coursesState extends State<courses> {
                             seassionNum: 6,
                             press: () {},
                           ),
+                          Text(
+                            "Videos",
+                            style: Theme.of(context)
+                                .textTheme
+                                .title
+                                .copyWith(fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 120,),
+                          notesBox(
+                            seassionNum: 6,
+                            press: () {},
+                          ),
+                          notesBox(
+                            seassionNum: 6,
+                            press: () {},
+                          ),
                         ],
-                      ),
-                      SizedBox(height: 20),
-                      Text(
-                        "Videos",
-                        style: Theme.of(context)
-                            .textTheme
-                            .title
-                            .copyWith(fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -151,11 +160,11 @@ class notesBox extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.deepPurpleAccent),
+                        border: Border.all(color: Colors.blueGrey),
                       ),
                       child: Icon(
-                        Icons.play_arrow,
-                        color:  Colors.deepPurpleAccent,
+                        Icons.book,
+                        color:  Colors.blueGrey,
                       ),
                     ),
                     SizedBox(width: 10),
