@@ -37,7 +37,6 @@ dependencies:
   shared_preferences: ^0.5.12+4
   rxdart: 0.20.0
   image_picker: ^0.6.7+17
-  animator: ^2.0.2
   flutter_animation_set: ^0.0.4
   outline_material_icons: ^0.1.0
   http:
@@ -45,7 +44,11 @@ dependencies:
   slimy_card: ^1.0.4
   file_picker: ^2.1.5+1
   uuid: ^2.2.2
+  sa_v1_migration: ^1.1.2
+  sticky_infinite_list: 3.0.1
+  flutter_neumorphic: ^3.0.3
   intl: ^0.16.1
+  youtube_player_flutter: ^6.0.3+2
 dev_dependencies:
   flutter_test:
     sdk: flutter

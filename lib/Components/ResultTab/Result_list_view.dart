@@ -1,6 +1,7 @@
 import 'dart:convert';
+
 import 'package:http/http.dart';
-import 'package:spec_app/Components/result_list_renderer.dart';
+import 'package:spec_app/Components/ResultTab/result_list_renderer.dart';
 import 'package:spec_app/Objects/Student.dart';
 import 'package:spec_app/main.dart';
 import 'package:http/http.dart' as http;
